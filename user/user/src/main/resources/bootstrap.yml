@@ -1,0 +1,14 @@
+spring:
+  profiles:
+    active: ${spring.profile.active:local}
+
+---
+
+spring:
+  profiles: local
+  cloud:
+    config:
+      uri: http://localhost:8181/config
+      profile: local
+      
+---
